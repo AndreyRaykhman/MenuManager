@@ -7,12 +7,13 @@ using Ex02.ConsoleUtils;
 
 namespace Ex04.Menus.Interfaces
 {
-     class Button:MenuItem, IRunable
+     public class Button:MenuItem, IRunable
      {
           private MenuItem m_Father;
 
-          public Button(MenuItem i_Father)
+          public Button(MenuItem i_Father,string i_ButtonName)
           {
+               base.m_MenuItemName = i_ButtonName;
                m_Father = i_Father;
                if (m_Father is Menu)
                {
