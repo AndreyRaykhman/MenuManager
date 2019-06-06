@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Ex02.ConsoleUtils;
 
 namespace Ex04.Menus.Interfaces
 {
@@ -13,6 +14,14 @@ namespace Ex04.Menus.Interfaces
           public Button(MenuItem i_Father)
           {
                m_Father = i_Father;
+               if (m_Father is Menu)
+               {
+                    (m_Father as Menu).AddMenuItem(this);
+               }
+               else
+               {
+                    (m_Father as MainMenu).AddMenuItem(this);
+               }
           }
 
           public void Run()
@@ -23,8 +32,8 @@ namespace Ex04.Menus.Interfaces
                }
 
                Console.WriteLine("{0} in process....", base.m_MenuItemName);
-               //clear screen
-               if(m_Father is Menu)
+               Screen.Clear();
+               if (m_Father is Menu)
                {
                     (m_Father as Menu).Show();
                }

@@ -3,23 +3,42 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Ex02.ConsoleUtils;
 
 namespace Ex04.Menus.Interfaces
 {
-     class Menu:MenuItem, IShowable
+     public class Menu:MenuItem, IShowable
      {
+          private MenuItem m_Father;
           private List<MenuItem> m_MenuList;
           private Button m_Back;
           private readonly int m_Level;
+          
 
-          public Menu(string i_Title, int i_Level)
+          public Menu(MenuItem i_Father)
           {
-               base.m_MenuItemName = i_Title;
-               m_Level = i_Level;
+               base.m_MenuItemName = m_Father.MenuItemName;
+               m_Father = i_Father;
                m_MenuList = new List<MenuItem>();
                m_Back = new Button(this);
                m_Back.MenuItemName = "Back";
                m_MenuList.Add(m_Back);
+
+               if (m_Father is MainMenu)
+               {
+                    m_Level = (m_Father as MainMenu).Level+1;
+                    (m_Father as MainMenu).AddMenuItem(this);
+               }
+               else
+               {
+                    m_Level = (m_Father as Menu).m_Level+1;
+                    (m_Father as Menu).AddMenuItem(this);
+               }
+          }
+
+          public void AddMenuItem(MenuItem i_MenuItem)
+          {
+               m_MenuList.Add(i_MenuItem);
           }
 
           public void Show()
@@ -41,12 +60,12 @@ namespace Ex04.Menus.Interfaces
 
                if(m_MenuList[numOption] is Button)
                {
-                    //clear screen
+                    Screen.Clear();
                     (m_MenuList[numOption] as Button).Run();
                }
                else
                {
-                    //clear screen
+                    Screen.Clear();
                     (m_MenuList[numOption] as Menu).Show();
                }
           }

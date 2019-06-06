@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Ex02.ConsoleUtils;
 
 namespace Ex04.Menus.Interfaces
 {
-     class MainMenu:MenuItem, IShowable
+     public class MainMenu:MenuItem, IShowable
      {
           List<MenuItem> m_MenuList;
           Button m_Exit;
@@ -19,6 +20,16 @@ namespace Ex04.Menus.Interfaces
                m_Exit = new Button(this);
                m_Exit.MenuItemName = "Exit";
                m_MenuList.Add(m_Exit);
+          }
+
+          public void AddMenuItem(MenuItem i_MenuItem)
+          {
+               m_MenuList.Add(i_MenuItem);
+          }
+
+          public int Level
+          {
+               get { return m_Level; }
           }
 
           public void Show()
@@ -40,12 +51,12 @@ namespace Ex04.Menus.Interfaces
 
                if (m_MenuList[numOption] is Button)
                {
-                    //clear screen
+                    Screen.Clear();
                     (m_MenuList[numOption] as Button).Run();
                }
                else
                {
-                    //clear screen
+                    Screen.Clear();
                     (m_MenuList[numOption] as Menu).Show();
                }
           }
