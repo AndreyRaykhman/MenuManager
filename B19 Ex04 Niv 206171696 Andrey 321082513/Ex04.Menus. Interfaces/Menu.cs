@@ -15,13 +15,12 @@ namespace Ex04.Menus.Interfaces
           private readonly int m_Level;
           
 
-          public Menu(MenuItem i_Father)
+          public Menu(MenuItem i_Father,string i_MenuName)
           {
-               base.m_MenuItemName = m_Father.MenuItemName;
+               base.m_MenuItemName = i_MenuName;
                m_Father = i_Father;
                m_MenuList = new List<MenuItem>();
-               m_Back = new Button(this);
-               m_Back.MenuItemName = "Back";
+               m_Back = new Button(this,"Back");
                m_MenuList.Add(m_Back);
 
                if (m_Father is MainMenu)
@@ -50,23 +49,22 @@ namespace Ex04.Menus.Interfaces
 
                for(int i=0 ; i < m_MenuList.Count ; i++)
                {
-                    Console.WriteLine("{0}.{1}", i, m_MenuList[i].MenuItemName);
+                    Console.WriteLine("{0}.{1}", i, m_MenuList.ElementAt(i).MenuItemName);
                }
-               
-               while(numOption==-1)
+
+               while (numOption == -1)
                {
                     InputFromUser.GetOptionFromUser(m_MenuList.Count, out numOption);
                }
 
-               if(m_MenuList[numOption] is Button)
-               {
-                    Screen.Clear();
-                    (m_MenuList[numOption] as Button).Run();
+               Screen.Clear();
+               if (m_MenuList.ElementAt(numOption) is Button)
+               {                   
+                    (m_MenuList.ElementAt(numOption) as Button).Run();
                }
                else
                {
-                    Screen.Clear();
-                    (m_MenuList[numOption] as Menu).Show();
+                    (m_MenuList.ElementAt(numOption) as Menu).Show();                  
                }
           }
      }

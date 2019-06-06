@@ -17,8 +17,7 @@ namespace Ex04.Menus.Interfaces
           {
                base.m_MenuItemName = i_MainTitle;
                m_MenuList = new List<MenuItem>();
-               m_Exit = new Button(this);
-               m_Exit.MenuItemName = "Exit";
+               m_Exit = new Button(this,"Exit");
                m_MenuList.Add(m_Exit);
           }
 
@@ -41,7 +40,7 @@ namespace Ex04.Menus.Interfaces
 
                for (int i = 0; i < m_MenuList.Count; i++)
                {
-                    Console.WriteLine("{0}.{1}", i, m_MenuList[i].MenuItemName);
+                    Console.WriteLine("{0}.{1}", i, m_MenuList.ElementAt(i).MenuItemName);
                }
 
                while (numOption == -1)
