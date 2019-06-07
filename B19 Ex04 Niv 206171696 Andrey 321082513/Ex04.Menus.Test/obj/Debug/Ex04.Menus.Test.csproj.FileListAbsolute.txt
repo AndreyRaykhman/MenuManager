@@ -1,9 +1,0 @@
-C:\Users\nivko\Desktop\github\B19 Ex04 Niv 206171696 Andrey 321082513\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.csprojResolveAssemblyReference.cache
-C:\Users\nivko\Desktop\github\B19 Ex04 Niv 206171696 Andrey 321082513\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Test.exe.config
-C:\Users\nivko\Desktop\github\B19 Ex04 Niv 206171696 Andrey 321082513\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Test.exe
-C:\Users\nivko\Desktop\github\B19 Ex04 Niv 206171696 Andrey 321082513\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Test.pdb
-C:\Users\nivko\Desktop\github\B19 Ex04 Niv 206171696 Andrey 321082513\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Interfaces.dll
-C:\Users\nivko\Desktop\github\B19 Ex04 Niv 206171696 Andrey 321082513\Ex04.Menus.Test\bin\Debug\Ex02.ConsoleUtils.dll
-C:\Users\nivko\Desktop\github\B19 Ex04 Niv 206171696 Andrey 321082513\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Interfaces.pdb
-C:\Users\nivko\Desktop\github\B19 Ex04 Niv 206171696 Andrey 321082513\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.exe
-C:\Users\nivko\Desktop\github\B19 Ex04 Niv 206171696 Andrey 321082513\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.pdb
