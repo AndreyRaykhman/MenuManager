@@ -1,7 +1,0 @@
-C:\Users\nivko\Desktop\github\B19 Ex04 Niv 206171696 Andrey 321082513\Ex04.Menus. Interfaces\bin\Debug\Ex04.Menus.Interfaces.dll.config
-C:\Users\nivko\Desktop\github\B19 Ex04 Niv 206171696 Andrey 321082513\Ex04.Menus. Interfaces\bin\Debug\Ex04.Menus.Interfaces.dll
-C:\Users\nivko\Desktop\github\B19 Ex04 Niv 206171696 Andrey 321082513\Ex04.Menus. Interfaces\bin\Debug\Ex04.Menus.Interfaces.pdb
-C:\Users\nivko\Desktop\github\B19 Ex04 Niv 206171696 Andrey 321082513\Ex04.Menus. Interfaces\obj\Debug\Ex04.Menus. Interfaces.csprojResolveAssemblyReference.cache
-C:\Users\nivko\Desktop\github\B19 Ex04 Niv 206171696 Andrey 321082513\Ex04.Menus. Interfaces\obj\Debug\Ex04.Menus.Interfaces.dll
-C:\Users\nivko\Desktop\github\B19 Ex04 Niv 206171696 Andrey 321082513\Ex04.Menus. Interfaces\obj\Debug\Ex04.Menus.Interfaces.pdb
-C:\Users\nivko\Desktop\github\B19 Ex04 Niv 206171696 Andrey 321082513\Ex04.Menus. Interfaces\bin\Debug\Ex02.ConsoleUtils.dll
