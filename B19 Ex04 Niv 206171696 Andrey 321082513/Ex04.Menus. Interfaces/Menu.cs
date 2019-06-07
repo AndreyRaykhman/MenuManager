@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Ex02.ConsoleUtils;
 
 namespace Ex04.Menus.Interfaces
@@ -21,7 +19,6 @@ namespace Ex04.Menus.Interfaces
                m_Father = i_Father;
                m_MenuList = new List<MenuItem>();
                m_Back = new Button(this,"Back");
-               m_MenuList.Add(m_Back);
 
                if (m_Father is MainMenu)
                {
@@ -38,6 +35,11 @@ namespace Ex04.Menus.Interfaces
           public void AddMenuItem(MenuItem i_MenuItem)
           {
                m_MenuList.Add(i_MenuItem);
+          }
+
+          public MenuItem Father
+          {
+               get { return m_Father; }
           }
 
           public void Show()

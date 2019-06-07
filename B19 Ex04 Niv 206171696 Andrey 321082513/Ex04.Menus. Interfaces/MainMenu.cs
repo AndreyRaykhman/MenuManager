@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Ex02.ConsoleUtils;
 
 namespace Ex04.Menus.Interfaces
@@ -18,7 +16,6 @@ namespace Ex04.Menus.Interfaces
                base.m_MenuItemName = i_MainTitle;
                m_MenuList = new List<MenuItem>();
                m_Exit = new Button(this,"Exit");
-               m_MenuList.Add(m_Exit);
           }
 
           public void AddMenuItem(MenuItem i_MenuItem)
@@ -48,15 +45,15 @@ namespace Ex04.Menus.Interfaces
                     InputFromUser.GetOptionFromUser(m_MenuList.Count, out numOption);
                }
 
-               if (m_MenuList[numOption] is Button)
+               if (m_MenuList.ElementAt(numOption) is Button)
                {
                     Screen.Clear();
-                    (m_MenuList[numOption] as Button).Run();
+                    (m_MenuList.ElementAt(numOption) as Button).Run();
                }
                else
                {
                     Screen.Clear();
-                    (m_MenuList[numOption] as Menu).Show();
+                    (m_MenuList.ElementAt(numOption) as Menu).Show();
                }
           }
      }
